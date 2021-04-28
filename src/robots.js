@@ -7,7 +7,7 @@ export const robots=[
     },
     {
         id: 2,
-        name:'hasith',
+        name:'Hasith',
         username: 'mr.H',
         email: 'hasithrathnasinghe@gmail.com'
     }
