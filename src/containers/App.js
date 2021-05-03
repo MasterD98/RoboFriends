@@ -8,7 +8,6 @@ import ErrorBoundry from '../components/ErrorBoundry'
 import {setSearchField,requestRobots} from '../actions.js'
 
 const mapStateToProps=(state)=>{
-    console.log(8);
     return {
         searchField:state.searchRobots.searchField,
         robots:state.requestRobots.robots,
@@ -17,7 +16,6 @@ const mapStateToProps=(state)=>{
     }
 }
 const mapDispatchToProps = (dispatch)=>{
-    console.log(9);
     return{
         onSearchChange:(event) => dispatch(setSearchField(event.target.value)),
         onRequestRobots:()=> requestRobots(dispatch)
@@ -30,7 +28,6 @@ class App extends React.Component {
     }
 
     render(){
-        console.log(10);
         const {searchField,onSearchChange,robots,isPending}=this.props;
         const filteredRobots=robots.filter(robot=>{
             return robot.name.toLowerCase().includes(searchField.toLowerCase())
